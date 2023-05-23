@@ -131,72 +131,95 @@
 //    return 0;
 //}
 
+//#include <stdio.h>
+//#include <stdlib.h>
+//
+//struct Car {
+//    char color[20];
+//    float price;
+//    int numberOfSeats;
+//    int numberOfTypes;
+//};
+//
+//int main() {
+//    struct Car* car1;
+//    struct Car* car2;
+//
+//    // Dynamically allocate memory for car1
+//    car1 = (struct Car*)malloc(sizeof(struct Car));
+//    if (car1 == NULL) {
+//        printf("Memory allocation failed for car1.\n");
+//        return 1;
+//    }
+//
+//    // Dynamically allocate memory for car2
+//    car2 = (struct Car*)malloc(sizeof(struct Car));
+//    if (car2 == NULL) {
+//        printf("Memory allocation failed for car2.\n");
+//        free(car1); // Free the memory allocated for car1
+//        return 1;
+//    }
+//
+//    printf("Enter details for car1:\n");
+//    printf("Color: ");
+//    scanf("%s", car1->color);
+//    printf("Price: ");
+//    scanf("%f", &(car1->price));
+//    printf("Number of seats: ");
+//    scanf("%d", &(car1->numberOfSeats));
+//    printf("Number of types: ");
+//    scanf("%d", &(car1->numberOfTypes));
+//
+//    printf("\nEnter details for car2:\n");
+//    printf("Color: ");
+//    scanf("%s", car2->color);
+//    printf("Price: ");
+//    scanf("%f", &(car2->price));
+//    printf("Number of seats: ");
+//    scanf("%d", &(car2->numberOfSeats));
+//    printf("Number of types: ");
+//    scanf("%d", &(car2->numberOfTypes));
+//
+//    printf("\nCar1 Details:\n");
+//    printf("Color: %s\n", car1->color);
+//    printf("Price: %.2f\n", car1->price);
+//    printf("Number of seats: %d\n", car1->numberOfSeats);
+//    printf("Number of types: %d\n", car1->numberOfTypes);
+//
+//    printf("\nCar2 Details:\n");
+//    printf("Color: %s\n", car2->color);
+//    printf("Price: %.2f\n", car2->price);
+//    printf("Number of seats: %d\n", car2->numberOfSeats);
+//    printf("Number of types: %d\n", car2->numberOfTypes);
+//
+//    // Free the allocated memory
+//    free(car1);
+//    free(car2);
+//
+//    return 0;
+//}
 #include <stdio.h>
-#include <stdlib.h>
-
-struct Car {
-    char color[20];
-    float price;
-    int numberOfSeats;
-    int numberOfTypes;
-};
-
 int main() {
-    struct Car* car1;
-    struct Car* car2;
-
-    // Dynamically allocate memory for car1
-    car1 = (struct Car*)malloc(sizeof(struct Car));
-    if (car1 == NULL) {
-        printf("Memory allocation failed for car1.\n");
-        return 1;
+int rows = 5,i,j,k;
+ 
+    // outer loop to iterator through each row
+    for ( i = 0; i < rows; i++) {
+ 
+        // inner loop to print * star in each row
+        for ( j = 0; j < rows; j++) {
+            // statement to check boundry condition
+            if (i > 0 && i < rows - 1 && j > 0
+                && j < rows - 1) {
+                printf("  ");
+            }
+            else {
+                printf("* ");
+            }
+        }
+        printf("\n");
     }
-
-    // Dynamically allocate memory for car2
-    car2 = (struct Car*)malloc(sizeof(struct Car));
-    if (car2 == NULL) {
-        printf("Memory allocation failed for car2.\n");
-        free(car1); // Free the memory allocated for car1
-        return 1;
-    }
-
-    printf("Enter details for car1:\n");
-    printf("Color: ");
-    scanf("%s", car1->color);
-    printf("Price: ");
-    scanf("%f", &(car1->price));
-    printf("Number of seats: ");
-    scanf("%d", &(car1->numberOfSeats));
-    printf("Number of types: ");
-    scanf("%d", &(car1->numberOfTypes));
-
-    printf("\nEnter details for car2:\n");
-    printf("Color: ");
-    scanf("%s", car2->color);
-    printf("Price: ");
-    scanf("%f", &(car2->price));
-    printf("Number of seats: ");
-    scanf("%d", &(car2->numberOfSeats));
-    printf("Number of types: ");
-    scanf("%d", &(car2->numberOfTypes));
-
-    printf("\nCar1 Details:\n");
-    printf("Color: %s\n", car1->color);
-    printf("Price: %.2f\n", car1->price);
-    printf("Number of seats: %d\n", car1->numberOfSeats);
-    printf("Number of types: %d\n", car1->numberOfTypes);
-
-    printf("\nCar2 Details:\n");
-    printf("Color: %s\n", car2->color);
-    printf("Price: %.2f\n", car2->price);
-    printf("Number of seats: %d\n", car2->numberOfSeats);
-    printf("Number of types: %d\n", car2->numberOfTypes);
-
-    // Free the allocated memory
-    free(car1);
-    free(car2);
-
-    return 0;
+   return 0;
 }
+
 
 
