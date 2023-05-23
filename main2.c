@@ -199,27 +199,26 @@
 //    return 0;
 //}
 #include <stdio.h>
+
 int main() {
-int rows = 5,i,j,k;
- 
-    // outer loop to iterator through each row
-    for ( i = 0; i < rows; i++) {
- 
-        // inner loop to print * star in each row
-        for ( j = 0; j < rows; j++) {
-            // statement to check boundry condition
-            if (i > 0 && i < rows - 1 && j > 0
-                && j < rows - 1) {
-                printf("  ");
-            }
-            else {
-                printf("* ");
-            }
+    int rows, coef = 1, space, i, j;
+    printf("Enter the number of rows: ");
+    scanf("%d", &rows);
+    for (i = 0; i < rows; i++) {
+        for (space = 1; space < rows - i; space++)
+            printf("  ");
+        for (j = 0; j <= i; j++) {
+            if (j == 0 || i == 0)
+                coef = 1;
+            else
+                coef = coef * (i - j + 1) / j;
+            printf("%4d", coef);
         }
         printf("\n");
     }
-   return 0;
+    return 0;
 }
+
 
 
 
