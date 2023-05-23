@@ -677,7 +677,7 @@ int main(){
 	printf("---------------------------------------------------------------------------------\n");
 	printf("enter the data for the second matrix \n");
 	for(i=0;i<row;i++){
-		for(j=0;j<col;j++){
+		for(j=0;j<col;j++){}
 			printf("Enter the value for matrixB %dx%d  = ",i+1 , j+2);
 			scanf("%d",&matrixB[i][j] );
 		}
